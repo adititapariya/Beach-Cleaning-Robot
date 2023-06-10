@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="farm_bot_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00413302315404124 0.00666211969872622 -8.65044041209199E-11"
+        rpy="0 0 0" />
+      <mass
+        value="0.365211098963578" />
+      <inertia
+        ixx="0.000587851832472422"
+        ixy="-2.5088865580259E-06"
+        ixz="-1.85797674499311E-11"
+        iyy="0.00275979469789039"
+        iyz="-3.06654702051706E-13"
+        izz="0.00220629413672777" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="piston front">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 3.43680040246323E-17 0.0304789370624094"
+        rpy="0 0 0" />
+      <mass
+        value="0.0492496861306418" />
+      <inertia
+        ixx="3.61940839038542E-05"
+        ixy="-6.38007239207329E-23"
+        ixz="-3.17637355220363E-21"
+        iyy="3.61940839038542E-05"
+        iyz="-5.03314590811531E-21"
+        izz="5.26782397919921E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/piston front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/piston front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="piston1"
+    type="prismatic">
+    <origin
+      xyz="-0.043301 0 0.025"
+      rpy="-3.1416 -0.5236 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="piston front" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.06"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="piston rear">
+    <inertial>
+      <origin
+        xyz="6.93889390390723E-18 -1.85814245279061E-17 0.0304789370624093"
+        rpy="0 0 0" />
+      <mass
+        value="0.0492496861306418" />
+      <inertia
+        ixx="3.61940839038542E-05"
+        ixy="2.45808401609207E-24"
+        ixz="-1.6940658945086E-21"
+        iyy="3.61940839038542E-05"
+        iyz="-2.46741021972222E-21"
+        izz="5.2678239791992E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/piston rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/piston rear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="piston2"
+    type="prismatic">
+    <origin
+      xyz="0.043301 0 0.025"
+      rpy="3.1416 0.5236 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="piston rear" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.06"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="wheel right front">
+    <inertial>
+      <origin
+        xyz="-0.0481728034412505 0 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.170342906048753" />
+      <inertia
+        ixx="0.000197594540802262"
+        ixy="5.82461381845058E-21"
+        ixz="4.09496689598892E-21"
+        iyy="0.000115040014294501"
+        iyz="-1.35525271560688E-20"
+        izz="0.000115040014294501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel right front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel right front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_front"
+    type="continuous">
+    <origin
+      xyz="-0.1 -0.05 0.03"
+      rpy="-2.0772 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel right front" />
+    <axis
+      xyz="1 0 0" />
+      <limit
+      upper="3.14"
+      lower="0.0"
+      effort="20"
+      velocity="100" />
+  </joint>
+  <link
+    name="wheel left front">
+    <inertial>
+      <origin
+        xyz="-0.0481728034412505 0 6.93889390390723E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.170342906048753" />
+      <inertia
+        ixx="0.000197594540802262"
+        ixy="3.460241947874E-21"
+        ixz="-8.60047549874402E-21"
+        iyy="0.000115040014294501"
+        iyz="0"
+        izz="0.000115040014294501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel left front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel left front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_front"
+    type="continuous">
+    <origin
+      xyz="-0.1 0.05 0.03"
+      rpy="2.8045 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel left front" />
+    <axis
+      xyz="-1 0 0" />
+     <limit
+      upper="3.14"
+      lower="0.0"
+      effort="20"
+      velocity="100" />
+  </joint>
+  <link
+    name="wheel left rear">
+    <inertial>
+      <origin
+        xyz="-0.0481728034412505 0 2.08166817117217E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.170342906048753" />
+      <inertia
+        ixx="0.000197594540802262"
+        ixy="1.01865426869992E-21"
+        ixz="1.18042317166485E-20"
+        iyy="0.000115040014294501"
+        iyz="5.0821976835258E-21"
+        izz="0.000115040014294501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel left rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel left rear.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="wheel_left_rear"
+    type="continuous">
+    <origin
+      xyz="0.1 0.05 0.03"
+      rpy="-3.0288 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel left rear" />
+    <axis
+      xyz="-1 0 0" />
+     <limit
+      upper="3.14"
+      lower="0.0"
+      effort="20"
+      velocity="100" />
+  </joint>
+  <link
+    name="wheel right rear">
+    <inertial>
+      <origin
+        xyz="-0.0481728034412505 -1.38777878078145E-17 5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.170342906048753" />
+      <inertia
+        ixx="0.000197594540802262"
+        ixy="1.33989645938052E-20"
+        ixz="2.19619835461011E-22"
+        iyy="0.000115040014294501"
+        iyz="-3.72694496791892E-20"
+        izz="0.000115040014294501" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel right rear.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://farm_bot/meshes/wheel right rear.STL" />
+      </geometry>
+
+    </collision>
+  </link>
+  <joint
+    name="wheel_right_rear"
+    type="continuous">
+    <origin
+      xyz="0.1 -0.05 0.03"
+      rpy="-2.0959 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="wheel right rear" />
+    <axis
+      xyz="1 0 0" />
+     <limit
+      upper="3.14"
+      lower="0.0"
+      effort="20"
+      velocity="100" />
+  </joint>
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/farm_bot</robotNamespace>
+    </plugin>
+  </gazebo>
+  
+  <transmission name="wrr_">
+       <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_right_rear">
+           <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="Motor1">
+       <hardwareInterface>EffortJointInterface</hardwareInterface>
+       <mechanicalReduction>10</mechanicalReduction>
+    </actuator>
+   </transmission>
+   
+   <transmission name="wlr_">
+       <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_left_rear">
+      <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="Motor2">
+       <hardwareInterface>EffortJointInterface</hardwareInterface>
+       <mechanicalReduction>10</mechanicalReduction>
+    </actuator>
+   </transmission>
+   
+   <transmission name="wlf_">
+       <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_left_front">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="Motor3">
+       <hardwareInterface>EffortJointInterface</hardwareInterface>
+       <mechanicalReduction>10</mechanicalReduction>
+    </actuator>
+   </transmission>
+   
+   <transmission name="wrf_">
+       <type>transmission_interface/SimpleTransmission</type>
+      <joint name="wheel_right_front">
+            <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="Motor4">
+       <hardwareInterface>EffortJointInterface</hardwareInterface>
+       <mechanicalReduction>10</mechanicalReduction>
+    </actuator>
+   </transmission>
+   <gazebo reference="base_link">
+    <sensor type="ray" name="head_hokuyo_sensor">
+      <pose>0 0 -0.025 0 0 -3.14</pose>
+      <visualize>true</visualize>
+      <update_rate>10</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>5</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.570796</min_angle>
+            <max_angle>1.570796</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>1.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_laser.so">
+        <topicName>/rrbot/laser/scan</topicName>
+        <frameName>base_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+  <gazebo reference="base_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>10</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 -1.57</rpyOffset>
+        <frameName>base_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+  <gazebo>
+    <plugin name="novatel_gps_sim" filename="libhector_gazebo_ros_gps.so">
+      <alwaysOn>1</alwaysOn>
+      <updateRate>10.0</updateRate>
+      <bodyName>base_link</bodyName>
+      <topicName>fix</topicName>
+      <velocityTopicName>fix_velocity</velocityTopicName>
+      <referenceLatitude> 0.0</referenceLatitude>
+      <referenceLongitude> 0.0 </referenceLongitude> 
+      <gaussianNoise>0.0 0.0 0.0</gaussianNoise>
+      <velocityGaussianNoise>0.0 0.0 0.0</velocityGaussianNoise>
+     
+     
+    </plugin>
+   </gazebo>
+</robot>

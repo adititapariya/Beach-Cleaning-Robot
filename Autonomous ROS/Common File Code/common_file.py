@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+import rospy
+from geometry_msgs.msg import Twist
+from std_msgs.msg import Float64
+
+rospy.init_node('controller')
+
+pub1 = rospy.Publisher('/farm_bot/leftWheelfront_effort_controller/command', Float64, queue_size = 10)
+pub2 = rospy.Publisher('/farm_bot/leftWheelrear_effort_controller/command', Float64, queue_size = 10)
+pub3 = rospy.Publisher('/farm_bot/rightWheelfront_effort_controller/command', Float64, queue_size = 10)
+pub4 = rospy.Publisher('/farm_bot/rightWheelrear_effort_controller/command', Float64, queue_size = 10)
+
+def callback(msg):
+    print (msg.linear.x)
+    print (msg.angular.z)
+    print(" ")
+    global move
+    move = Float64()
+    move.data = msg.linear.x
+    global turn
+    turn = Float64()
+    turn.data = msg.angular.z
+    
+    v1 = (move.data + turn.data)
+    v2 = (move.data - turn.data)
+
+    pub1.publish(v1)
+    pub2.publish(v1)
+    pub3.publish(v2)
+    pub4.publish(v2)
+
+sub = rospy.Subscriber('cmd_vel', Twist, callback)
+rospy.spin()
