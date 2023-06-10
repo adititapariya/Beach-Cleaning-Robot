@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'frocker_r_rev', 'fwheel_r_con', 'mwheel_r_con', 'frocker_l_rev', 'fwheel_l_con', 'mwheel_l_con', 'brocker_rev', 'bwheel_r_con', 'bwheel_l_con', 'arm_1_pri', 'arm_2_pri', 'arm_3_rev', 'arm_4_rev', 'arm_5_rev', 'finger_1_pri', 'finger_2_pri', ]
