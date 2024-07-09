@@ -1,5 +1,5 @@
-# SWEEP: Sand Waste Elimination and Environmental Protection
-Introducing SWEEP, Sand Waste Elimination and Environmental Pollution, a revolutionary Beach Cleaning Robot at the forefront of waste management and coastal preservation. SWEEP is equipped with advanced features for waste collection and segregation, making it a game-changer in beach maintenance.
+# SWEEP: Sand Waste Elimination and Environmental Protection, a Beach Cleaning Robot
+Introducing SWEEP, Sand Waste Elimination and Environmental Pollution, a revolutionary Beach Cleaning Robot at the forefront of waste management and coastal preservation. SWEEP is equipped with advanced waste collection and segregation features, making it a game-changer in beach maintenance.
 
 SWEEP's cutting-edge design incorporates high-torque DC motors and wide tires on its four wheels, ensuring exceptional traction on sandy surfaces. The strategically positioned claws and sieves, seamlessly integrated into a chain drive conveyor system, efficiently collect and separate debris. A vibration mechanism further enhances sand removal. The waste segregation system, equipped with a proximity sensor and automated servo motors, precisely categorizes and directs waste into designated bins. As the bins reach capacity, SWEEP autonomously disposes of the waste into designated locations, adding an extra layer of efficiency and user convenience.
 
